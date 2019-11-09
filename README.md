@@ -7,4 +7,14 @@ Stat pulling and chart building done by the [ncaahoopR package](https://github.c
 
 Dasboarding done through [R Shiny](https://shiny.rstudio.com/)
 
-I'm throwing [the R code I used](https://github.com/morrisLuke/kansas_basketball_dashboard/blob/master/kubball_public.R) on GitHub as a starting point for anyone who wants to make a dashboard for their team of choice. Need a hand? Reach out.
+I'm throwing [the R code I used](https://github.com/morrisLuke/kansas_basketball_dashboard/blob/master/kubball_public.R) on GitHub as a starting point for anyone who wants to make a dashboard for their team of choice. 
+
+You can grab a vector of your team's `game_id`s in `ncaahoopR` with
+
+```
+get_game_ids("teamName")
+```
+
+Need a hand? Reach out.
+
+Make a dashboard from this? Reach out.
