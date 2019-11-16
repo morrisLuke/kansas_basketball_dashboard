@@ -14,8 +14,8 @@ ui <- fluidPage(
       checkboxGroupInput("dateBoxes", 
                          label = "Games to Include:",
                          choices = c("11-5 vs. Duke" = 401168155,
-                                     "11-8 vs. UNCG" = 401169601 #,
-                                     #                                    "11-15 vs. Monmouth" = 401169615,
+                                     "11-8 vs. UNCG" = 401169601,
+                                     "11-15 vs. Monmouth" = 401169615 #,
                                      #                                    "11-19 vs. ETSU" = 401169621,
                                      #                                    "11-25 at Chaminade" = 401169630,
                                      #                                    "12-7 vs. Colorado" = 401169646,
@@ -43,7 +43,7 @@ ui <- fluidPage(
                                      #                                    "3-4 vs. TCU" = 401169772,
                                      #                                    "3-7 at Texas Tech" = 401169774
                          ),
-                         selected = c(401168155, 401169601)
+                         selected = c(401168155, 401169601, 401169615)
       ),
       
       # Radio button input for weighting 3-pointers    
@@ -63,7 +63,7 @@ ui <- fluidPage(
                    step = 0.01,
                    value = 0.1
       ),
-     
+      
       #Radio button input for presenting shot chart as heatmap
       radioButtons("heatmapSelector",
                    label = "SHOT CHART OPTIONS \n
@@ -79,7 +79,8 @@ ui <- fluidPage(
         plotOutput("assistNetworkPlot")
       ),
       fluidRow(
-        plotOutput("kuShotChart") #,
+        plotOutput("kuShotChart"),
+        plotOutput("oppShotChart")
       )
     )
   )
@@ -101,6 +102,12 @@ server <- function(input, output) {
     team_shot_chart(game_ids = input$dateBoxes,
                     team = "Kansas",
                     heatmap = input$heatmapSelector)
+  })
+  
+  output$oppShotChart <- renderPlot({
+    opp_shot_chart(game_ids = input$dateBoxes,
+                   team = "Kansas",
+                   heatmap = input$heatmapSelector)
   })
 }
 
