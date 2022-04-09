@@ -1,7 +1,7 @@
 # Kansas Basketball Dashboard
 An R Shiny dashboard application to track the 2021-22 Kansas men's college basketball season
 
-View curent state of the dashboard at https://lukemorris.shinyapps.io/Kansas_Basketball/
+View curent state of the dashboard [here](https://hzr5pf-luke0morris.shinyapps.io/kansas-basketball-2021-22/)
 
 Stat pulling and chart building done by the [ncaahoopR package](https://github.com/lbenz730/ncaahoopR)
 
