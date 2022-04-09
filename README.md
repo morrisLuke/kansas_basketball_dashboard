@@ -1,5 +1,5 @@
 # Kansas Basketball Dashboard
-An R Shiny dashboard application to track the 2019-20 Kansas men's college basketball season
+An R Shiny dashboard application to track the 2021-22 Kansas men's college basketball season
 
 View curent state of the dashboard at https://lukemorris.shinyapps.io/Kansas_Basketball/
 
